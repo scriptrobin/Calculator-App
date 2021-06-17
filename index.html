@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet">
+</head>
+
+<body ng-app="calculatorApp">
+
+    <div ng-controller="calculatorController">
+        <div class="container">
+            <div class="row head-center">
+                <h1> Calculator App</h1>
+            </div>
+            <div class="Calculator">
+                <div class="head" id="head">
+                    <p class="input">{{initial}}<br>{{value}}</p>
+                </div>
+                <div class="calbody">
+                    <button class="btn op" id="clear" value="AC" ng-click="clearAll()">AC</button>
+                    <button class="btn op" id="ce" value="CE" ng-click="clearOne()">CE</button>
+                    <button class="btn operators" value="%" ng-click="upper('%')">%</button>
+                    <button class="btn operators" value="/" ng-click="upper('/')">/</button>
+                    <button class="btn" value=7 ng-click="upper(7)">7</button>
+                    <button class="btn" value=8 ng-click="upper(8)">8</button>
+                    <button class="btn" value=9 ng-click="upper(9)">9</button>
+                    <button class="btn operators" value=* ng-click="upper('*')">*</button>
+                    <button class="btn" value=4 ng-click="upper(4)">4</button>
+                    <button class="btn" value=5 ng-click="upper(5)">5</button>
+                    <button class="btn" value=6 ng-click="upper(6)">6</button>
+                    <button class="btn operators" ng-click="upper('-')">-</button>
+                    <button class="btn" value=1 ng-click="upper(1)">1</button>
+                    <button class="btn" value=2 ng-click="upper(2)">2</button>
+                    <button class="btn" value=3 ng-click="upper(3)">3</button>
+                    <button class="btn operators" ng-click="upper('+')">+</button>
+                    <button class="btn" ng-click="upper('.')">.</button>
+                    <button class="btn" value=0 ng-click="upper(0)">0</button>
+                    <button class="btn equal" ng-click="evaluate()">=</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
